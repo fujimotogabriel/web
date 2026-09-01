@@ -1,0 +1,27 @@
+#cabecalho {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 3%;
+}
+
+#navi {
+    width: 20%;
+}
+
+#banner {
+    border-style: solid;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.txt_underline {
+    text-decoration: underline rgb(58, 234, 247) solid 5px;
+    text-underline-offset: 10px;
+}
