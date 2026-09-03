@@ -1,31 +1,83 @@
 /* Geral */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.text-links {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
 #cabecalho {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 3%;
+    height: 3vw;
+    padding: 2% 3%;
 }
 
 #navi {
     width: 20%;
 }
 
-#banner {
-    margin-bottom: 0%;
+footer {
+  display: flex;
+  justify-content: center ;
+}
+
+footer p{
+  color: #85899a;
+  font-weight: 500;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  height: 10vw;
+  padding-left: 2vw;
+  margin-bottom: 0px;
+
+  background: linear-gradient(
+    110deg,
+    #394364 0%,
+    #4d5b86 55%,
+    #6574a2 100%
+);
+
+  color: white;
+}
+
+.banner-content p {
+  display: block;
+  color: #25c8c0; 
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0 !important;
     margin: 0;
     display:flex;
     justify-content: space-evenly;
 }
 
-a {
+.nav-links{
     color: black;
     text-decoration: none;
 }
+
+
 
 .selecionado {
     color: grey;
@@ -46,90 +98,134 @@ a {
 }
 
 /* Sobre */
+#info-sobre {
+  background-color: #f5f6fa;
+  display: grid;
+  padding: 2vw 4vw;
+}
 
+#info-sobre p {
+  font-size: clamp(15px, 20px, 22px);
+  color: #6b7280;
+  line-height: 1.5;
+}
 
-/* test */
-* {
-    box-sizing: border-box;
-  }
+#card-sobre {
+  display: grid;
+  grid-template-areas: 
+  'titulo titulo titulo'
+  'c1 c2 c3'
+  'c3 c4';
+}
+
+#c-titulo {
+  grid-area: titulo;
+}
+
+#c-mat {
+  grid-area: c1;
+}
+
+#c-tecno {
+  grid-area: c2;
+}
+
+#c-prof {
+  grid-area: c3;
+}
+
+#c-avalia {
+  grid-area: c4;
+}
+
+#c-local {
+  grid-area: c5;
+}
+
+/* Contato */
+
+#info-contato {
+  background-color: #f5f6fa;
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  padding: 3vw 2vw;
+}
+
+#info-column1 {
+  grid-column: 2;
+}
+
+#info-column2 {
+  grid-column: 3;
+  display: grid;
+  justify-content: center;
+}
+
+#info-contato h2 {
+  margin: 0;
+  font-size: clamp(20px, 30px, 40px);
+}
+
+#form-contato{
+  display: grid;
+  background-color: white;
+  border-radius: 5%;
+  padding: 4vw 3vw;
+}
+
+#form-contato label, #info-column2 h3 {
+  color: #27324d;
+  font-weight: 700;
+}
+
+#form-contato input, #fdesc  {
+  border-radius: clamp(3px, 5px, 8px);
+  border: 2px solid;
+  border-color: #e6e8ef;
+  font-family: inherit;
+}
+
+#form-contato input::placeholder, #form-contato textarea::placeholder {
+  color: #bfc0c3;
   
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .contact-banner {
-    position: relative;
-    height: 170px;
-    overflow: hidden;
-  
-    display: flex;
-    align-items: center;
-  
-    padding: 0 44px;
-  
-    background: linear-gradient(
-      110deg,
-      #394364 0%,
-      #4d5b86 55%,
-      #6574a2 100%
-    );
-  
-    color: white;
-  }
-  
-  /* Text */
-  .content {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .eyebrow {
-    display: block;
-  
-    margin-bottom: 8px;
-  
-    color: #25c8c0;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-  }
-  
-  h1 {
-    margin: 0;
-  
-    font-size: 24px;
-    font-weight: 700;
-  }
-  
-  /* Large translucent circle */
-  .circle {
-    position: absolute;
-  
-    width: 98px;
-    height: 98px;
-  
-    right: 60px;
-    top: 32px;
-  
-    border-radius: 50%;
-  
-    background: rgba(255, 255, 255, 0.12);
-  }
-  
-  /* Dot pattern */
-  
-  
-  .dots {
-    width: clamp(60px, 8vw, 80px);
-    height: clamp(70px, 10vw, 100px);
-  
-    background-image: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.5) 1.5px,
-      transparent 1.5px
-    );
-  
-    background-size: clamp(8px, 1vw, 10px)
-                     clamp(8px, 1vw, 10px);
-  }
+}
+
+#femail, #fassunto {
+  padding: 2%;
+}
+
+#fdesc {
+  padding-bottom: 10%;
+}
+
+#fenviar {
+  width: 7vw;
+  height: 2vw;
+  border: none;
+  border-radius: 1vw;
+  background: #42c3b5;
+  color: #25334e;
+  font-weight: 700;
+}
+
+#info-column2 li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+/* Replace the number with a circle */
+#info-column2 li::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+
+  background: #adb5d8;
+  border-radius: 50%;
+
+  margin-right: 0;
+}
+
+#info-column2 h3, #info-column2 p {
+  display: block;
+} 
