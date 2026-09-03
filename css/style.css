@@ -32,6 +32,7 @@ body {
 footer {
   display: flex;
   justify-content: center ;
+  margin-top: 1vw;
 }
 
 footer p{
@@ -42,6 +43,7 @@ footer p{
 .banner {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   height: 10vw;
   padding-left: 2vw;
   margin-bottom: 0px;
@@ -92,18 +94,60 @@ ul {
 
 /* Index */
 
-#info-index {
+#info-index, #info-sobre {
     background-color: #f5f6fa;
-    margin-top: 0%;
+    display: grid;
+    row-gap: 1vw;
+    padding: 2vw 4vw;
 }
+
+#info-index p{
+  font-size: clamp(15px, 20px, 22px);
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.index-banner {
+  width: 25vw;
+  height: 15vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.index-banner p:first-of-type {
+  color: #25c8c0; 
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+.index-banner p {
+  color: rgba(255, 255, 255, 0.5); 
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#btn_conhecer {
+  width: 10vw;
+  height: 2vw;
+  border: none;
+  border-radius: 1vw;
+  background: #42c3b5;
+  color: #25334e;
+  font-weight: 700;
+}
+
+#card-index {
+  display: flex;
+  justify-content: center;
+}
+
 
 /* Sobre */
-#info-sobre {
-  background-color: #f5f6fa;
-  display: grid;
-  padding: 2vw 4vw;
-}
-
 #info-sobre p {
   font-size: clamp(15px, 20px, 22px);
   color: #6b7280;
@@ -113,9 +157,10 @@ ul {
 #card-sobre {
   display: grid;
   grid-template-areas: 
-  'titulo titulo titulo'
-  'c1 c2 c3'
-  'c3 c4';
+  "titulo titulo titulo titulo titulo titulo"
+    "c1 c1 c2 c2 c3 c3"
+    "c4 c4 c4 c5 c5 c5";
+  row-gap: 1vw;
 }
 
 #c-titulo {
@@ -140,6 +185,20 @@ ul {
 
 #c-local {
   grid-area: c5;
+}
+
+.card {
+  border-radius: 10px !important;
+  padding: 0.5vw;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-icone {
+  width: 2vw;
+  height: 2vw;
+  background: linear-gradient(135deg, #2574a5, #42c3b0);
+  border-radius: 6px;
+  margin-bottom: 10px;
 }
 
 /* Contato */
