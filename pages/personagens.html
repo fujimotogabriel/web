@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home</title>
-        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=width-device, initial-scale=1.0">
+        <title>Personagens</title>
+        <link rel="stylesheet" href="../css/style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     </head>
     <body>
         <header>
             <div class="container-fluid px-0">
-                <nav class="navbar navbar-expand-sm bg-dark navbar-dark px-3 px-sm-4 px-md-5">
+                
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark px-5">
                     <!--Logo-->
                     
-                    <a class="navbar-brand" href="index.html"><img src="imgs/Logo.png" class="logo"></a>
+                    <a class="navbar-brand" href="../index.html"><img src="../imgs/Logo.png" class="img-resp"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/personagens.html">Personagens</a>
+                                <a class="nav-link" href="personagens.html">Personagens</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Contato</a>
@@ -36,26 +37,28 @@
             </div>
         </header>
 
-
         <main>
-            <section class="banner">
-                <!--video background -->
-                <!--title and desc -->
-                <!--buy button -->
-                <div class="container-fluid px-0">
-                    <div class="card bg-dark text-white banner-card">
-                        <img src="imgs/Banner_rubi.png" class="card-img banner-img" alt="Banner">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
-                        </div>
+            <section class="chars">
+                <div class="container mt-5" id="div-char">
+                    <a href="#ruby-desc" data-bs-toggle="collapse" class="nav-link"><h1 >Ruby</h1></a>
+                    <div id="ruby-desc" class="collapse" data-bs-parent="#div-char">
+                        <p>Uma menina pequena que usa um capuz vermelho</p>
+                    </div>
+
+                    <a href="#roy-desc" data-bs-toggle="collapse" class="nav-link"><h1 >roy</h1></a>
+                    <div id="roy-desc" class="collapse" data-bs-parent="#div-char">
+                        <p>Um homem adulto caçador</p>
+                    </div>
+
+                    <a href="#wichiwi-desc" data-bs-toggle="collapse" class="nav-link"><h1 >wichiwi</h1></a>
+                    <div id="wichiwi-desc" class="collapse" data-bs-parent="#div-char">
+                        <p>Um ser da raça lagarto</p>
                     </div>
                 </div>
             </section>
 
             <section class="carousel">
-                    <h1>teste</h1>
+
             </section>
             <section class="game-description">
 
