@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-bs-theme="dark">
+<html lang="pt-br" data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=width-device, initial-scale=1.0">
@@ -9,23 +9,23 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     </head>
     <body>
-        <header>
+        <header class="sticky-top">
             <div class="container-fluid px-0">
                 
-                <nav class="navbar navbar-expand-sm bg-dark navbar-dark px-5">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top px-3 px-sm-4 px-md-5">
                     <!--Logo-->
                     
-                    <a class="navbar-brand" href="../index.html"><img src="../imgs/Logo.png" class="img-resp"></a>
+                    <a class="navbar-brand" href="../index.html"><img src="../imgs/Logo.png" class="logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="personagens.html">Personagens</a>
+                                <a class="nav-link" href="personagens.html" role="button">Personagens</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contato</a>
+                                <a class="nav-link" href="contato.html" role="button">Contato</a>
                             </li>
                         </ul>
                         <div class="btn btn-success">
@@ -39,29 +39,52 @@
 
         <main>
             <section class="chars">
-                <div class="container mt-5" id="div-char">
-                    <a href="#ruby-desc" data-bs-toggle="collapse" class="nav-link"><h1 >Ruby</h1></a>
-                    <div id="ruby-desc" class="collapse" data-bs-parent="#div-char">
-                        <p>Uma menina pequena que usa um capuz vermelho</p>
-                    </div>
+                <div class="container pt-5 d-flex flex-column" id="div-char">
 
-                    <a href="#roy-desc" data-bs-toggle="collapse" class="nav-link"><h1 >roy</h1></a>
+                    <button class="save-button align-self-center">
+                        <div class="save-content">
+                            <strong>Personagens</strong>
+                        </div>
+                    </button>
+                    
+                    <div class="pt-5">
+                        
+                        <a href="#ruby-desc" data-bs-toggle="collapse" class="personagem">
+                            <img src="../imgs/RubyPortrait.png" alt="Ruby" class="char-img">
+                            <h1 class="d-inline">Ruby</h1>
+                        </a>
+                        <div id="ruby-desc" class="collapse" data-bs-parent="#div-char">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum
+                        </p>
+                    </div>
+                    </div>
+                    <hr>
+
+                    <a href="#roy-desc" data-bs-toggle="collapse" class="personagem">
+                        <img src="../imgs/RoyPortrait.png" alt="Roy" class="char-img">
+                        <h1>Roy</h1>
+                    </a>
                     <div id="roy-desc" class="collapse" data-bs-parent="#div-char">
-                        <p>Um homem adulto caçador</p>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum
+                        </p>
                     </div>
+                    <hr>
 
-                    <a href="#wichiwi-desc" data-bs-toggle="collapse" class="nav-link"><h1 >wichiwi</h1></a>
+                    <a href="#wichiwi-desc" data-bs-toggle="collapse" class="personagem">
+                        <img src="../imgs/WichiwiPortrait.png" alt="Wichiwi" class="char-img">
+                        <h1 >Wichiwi</h1>
+                    </a>
                     <div id="wichiwi-desc" class="collapse" data-bs-parent="#div-char">
-                        <p>Um ser da raça lagarto</p>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum
+                        <p>
                     </div>
+                    <hr>
+                    
+
                 </div>
-            </section>
-
-            <section class="carousel">
-
-            </section>
-            <section class="game-description">
-
             </section>
         </main>
         <footer>

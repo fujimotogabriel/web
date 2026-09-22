@@ -1,11 +1,206 @@
+/* geral */
+section{
+  height: 40vw;
+}
+
+html, main, body {
+  background-color: rgb(33, 33, 37) !important;
+}
+
+
+/* Header */
 .logo {
   width: clamp(120px, 15vw, 180px);
 }
 
+/* index */
+
+.gif-container {
+  position: relative;
+}
+
+.gif-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.8),
+  rgba(0, 0, 0, 0.4)
+  );
+}
+
+.text {
+  z-index: 1;
+}
+
 .banner-img {
+  width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-oficial {
+  width: clamp(160px, 35vw, 300px);
+}
+
+.desc-text {
+  text-align: center;
+  font-size: 2.0rem;
+}
+
+#carrossel {
+  width: 55%;
+  height: 75%;
+}
+
+/* personagens */
+.save-button {
+    width: 75%;
+    height: 100px;
+    padding: 3px;
+    border: 0;
+    background: #6d91bd;
+    clip-path: polygon(
+        6% 0,
+        94% 0,
+        100% 50%,
+        94% 100%,
+        6% 100%,
+        0 50%
+    );
+    cursor: pointer;
+}
+
+.save-content {
+    width: 100%;
+    height: 100%;
+    background: #151a22;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    clip-path: inherit;
+}
+
+.save-content strong {
+    font-size: 21px;
+    letter-spacing: 4px;
+}
+
+.save-content small {
+    margin-top: 5px;
+    color: #8997aa;
+}
+
+
+.personagem {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.personagem h1 {
+  display: inline;
+}
+
+.personagem:hover {
+    background: #292c33;
+    color: #78a9e8;
+    padding-left: 30px;
+}
+
+.char-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 20px;
+
+    border: 2px solid #7098c9;
+}
+
+
+/* contato */
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 15vw;
+    padding: 40px;
+
+    background: #17191e;
+    border: 1px solid #383d45;
+    border-radius: 6px;
+}
+
+.contact-form {
+  width: 75%;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form > div {
   width: 100%;
 }
 
-html, main {
-  background-color: rgb(33, 33, 37);
+.btn-enviar {
+    
+    padding: 13px 30px;
+
+    background: #7098c9;
+    color: #151920;
+
+    border: none;
+    border-radius: 4px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 575.98px){ 
+  section {
+    height: 90vw
+  }
+
+  .game-description{
+    margin: 0 5px;
+  }
+}
+
+@media (min-width: 576.02px){ 
+  .gif-container {
+    height: 100%;
+  }
+}
+
+
+@media (max-width: 767.98px){
+    #carrossel {
+    width: 95%;
+    height: 75%;
+  }
+  .save-button {
+   height: 80px;
+    }
+}
+
+@media (max-width: 991.98px) {
+  .desc-text {
+    font-size: clamp(0.5rem, 1rem, 1.5rem)
+  }
 }
