@@ -1,76 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br" data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=width-device, initial-scale=1.0">
-        <title>Unes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </head>
     <body>
-        
-        <header id="cabecalho">
-            <img src="images/logo.png" alt="Logo da universidade">
-            
-            <nav id="navi">
-                <ul>
-                <li><a href="index.html" class="selecionado" class="nav-links"><h3 class="text-links">Home</h3></a></li>
-                <li><a href="pages/sobre.html" class="nav-links"><h3 class="text-links">Sobre</h3></a></li>
-                <li><a href="pages/contato.html" class="nav-links"><h3 class="text-links">Contato</h3></a></li>
-                </ul>
-            </nav>
+        <header class="sticky-top">
+            <div class="container-fluid px-0">
+               <nav class="navbar navbar-expand-sm bg-dark navbar-dark px-3 px-sm-4 px-md-5">
+                    <!--Logo-->
+                    
+                    <a class="navbar-brand" href="index.html"><img src="imgs/Logo.png" class="logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/personagens.html">Personagens</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/contato.html">Contato</a>
+                            </li>
+                        </ul>
+                        <div class="btn btn-success">
+                            <i class="bi bi-cart"></i>
+                            <a class="nav-link" style="display: inline" href="https://store.steampowered.com/app/1845250/Rubinite/">Comprar</a> 
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </header>
 
+
         <main>
-            <section class="banner" style="height: 20vw;">
-                <div class="index-banner">
-                    <p>universidade unes</p>
-                    <h2>Tecnologia que transforma o seu aprendizado</h2>
-                    <p>Cursos modernos, professores especialistas e uma experiência 100% digital para você aprender no seu ritmo.</p>
-                    <button id="btn_conhecer">Conheça a UNES</button>
+
+            <!-- Banner -->
+            <section class="banner">
+
+                <div class="container-fluid px-0 h-100">
+                    <div class="gif-container">
+                        <img src="imgs/Banner_rubi.gif" class="banner-img" alt="Banner">
+                        <div class="text position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center">
+                            <figure><img src="imgs/Logo.png" class="banner-logo"></figure>
+                            <a class="btn btn-dark btn-oficial" href="https://www.cupdoggames.com/en">Acessar o site oficial</a> 
+                        </div>
+                    </div>
                 </div>
+
             </section>
 
-            <section id="info-index">
-                <h2><span class="txt_underline">Sob</span>re a universidade</h2>
-                <p>
-                    A UNES é uma universidade fictícia criada para fins didáticos, com foco em ensinar conceitos introdutórios de HTML5 semântico e layouts modernos com Flexbox. 
-                    Este mockup representa a página inicial do site, estruturada com header, nav, section e footer.
+            <section class="game-description text-white mx-auto d-flex align-items-center w-75 ">
+                <p class="desc-text font-monospace">
+                    "Rubinite é um jogo de ação 2D no estilo pixel art, focado em batalhas contra chefes.
+                    O jogo apresenta uma mecânica central única chamada "Foco", que permite ao jogador localizar os pontos fracos dos inimigos por meio de uma observação concentrada e executar ataques de estocada." - Cup Dog Games
                 </p>
-                <p>O layout utiliza uma paleta de cores moderna, cartões com sombra suave, tipografia limpa e uma seção de destaque (hero) totalmente responsiva construída com Flexbox.</p>
-                
-                <div id="card-index">
-                    <div class="card" id="c-aula">
-                        <div class="card-body">
-                            <div class="card-icone" class="card-title"></div>
-                            <h2 class="card-text">Aulas flexíveis</h2>
-                            <p class="card-text">Estude quando e onde quiser, no seu próprio ritmo.</p>
-                        </div>
-                    </div>
-
-                    <div class="card" id="c-exp">
-                        <div class="card-body">
-                            <div class="card-icone" class="card-title"></div>
-                            <h2 class="card-text">Professores experts</h2>
-                            <p class="card-text">Equipe docente qualificada e atualizada.</p>
-                        </div>
-                    </div>
-
-                    <div class="card" id="c-plat">
-                        <div class="card-body">
-                            <div class="card-icone" class="card-title"></div>
-                            <h2 class="card-text">Plataforma moderna</h2>
-                            <p class="card-text">Ambiente digital simples e intuitivo.</p>
-                        </div>
-                    </div>
-                </div>
-
             </section>
+
+            <section class="container-fluid d-flex align-items-center justify-content-center">
+                    <!-- Carousel -->
+                    <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carrossel" data-bs-slide-to="3"></button>
+                    </div>
+
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner h-100">
+
+                        <div class="carousel-item active h-100">
+                            <iframe class="d-block w-100 h-100" src="https://www.youtube.com/embed/_XhDYcH3dgU">
+                            </iframe>
+                        </div>
+
+                        <figure class="carousel-item">
+                            <img src="imgs/car1.png" alt="Carrossel imagem 1" class="d-block w-100">
+                        </figure>
+
+                        <figure class="carousel-item">
+                            <img src="imgs/car2.png" alt="Carrossel imagem 2" class="d-block w-100">
+                        </figure>
+
+                        <figure class="carousel-item">
+                            <img src="imgs/car3.png" alt="Carrossel imagem 3" class="d-block w-100">
+                        </figure>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    </div>
+            </section>
+
+            
         </main>
-        
         <footer>
-            <p>© 2026 UNES Universidade — Todos os direitos reservados</p>
+
         </footer>
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
 </html>

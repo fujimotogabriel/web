@@ -1,76 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br" data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=width-device, initial-scale=1.0">
         <title>Contato</title>
         <link rel="stylesheet" href="../css/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     </head>
     <body>
-        <header id="cabecalho">
-            <img src="../images/logo.png" alt="Logo da universidade" id="img-uni">
-            <nav id="navi">
-                <ul>
-                <li><a href="../index.html" class="nav-links"><h3 class="text-links">Home</h3></a></li>
-                <li><a href="sobre.html"  class="nav-links"><h3 class="text-links">Sobre</h3></a></li>
-                <li><a href="contato.html" class="selecionado" class="nav-links"><h3  class="text-links">Contato</h3></a></li>
-                </ul>
-            </nav>
+        <header class="sticky-top">
+            <div class="container-fluid px-0">
+                <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark  px-3 px-sm-4 px-md-5">
+                    <!--Logo-->
+                    
+                    <a class="navbar-brand" href="../index.html"><img src="../imgs/Logo.png" class="logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="personagens.html">Personagens</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contato.html">Contato</a>
+                            </li>
+                        </ul>
+                        <div class="btn btn-success">
+                            <i class="bi bi-cart"></i>
+                            <a class="nav-link" style="display: inline" href="https://store.steampowered.com/app/1845250/Rubinite/">Comprar</a> 
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </header>
 
         <main>
-            <section class="banner">
-                <div class="banner-content">
-                  <p>FALE CONOSCO</p>
-                  <h1>Entre em contato com a UNES</h1>
-                </div>
-              </section>
+            <section class="contact">
+                <div class="container contact-box">
+                    <div class="contact-header">
+                        <h1 class="text-center">Sugestões</h1>
+                        <p>Envie ideias para melhorar este site não oficial!</p>
+                    </div>
+                    <form action="#" class="contact-form">
+                        <div class="form-floating mb-3 mt-3">
+                            <input type="email" class="form-control" id="email" placeholder="email" autocomplete="email" name="email">
+                            <label for="email">Seu e-mail</label>
+                        </div>
+    
+                        <div class="form-floating mb-3 mt-3">
+                            <textarea class="form-control" id="sugestao" name="sugestao" placeholder="sugestao"></textarea>
+                            <label for="sugestao">Sugestão</label>
+                        </div>
 
-            <section id="info-contato">
-                <div id="info-column1">
-                    <h2><span class="txt_underline">Env</span>ie sua mensagem</h2><br>
-                        <form id="form-contato">
-                            <label for="femail">Seu e-mail</label>
-                            <input type="text" id="femail" name="femail" placeholder="voce@email.com"><br>
-                            <label for="fassunto">Assunto</label>
-                            <input type="text" id="fassunto" name="fassunto" placeholder="Assunto da mensagem"><br>
-                            <label for="fdesc">Descrição</label>
-                            <textarea id="fdesc" placeholder="Escreva sua mensagem aqui..."></textarea><br>
-                            <button id="fenviar">Enviar</button>
-                        </form>
-                </div>
-
-                <div id="info-column2">
-                    <h2><span class="txt_underline">Out</span>ros canais</h2>
-                    <ol>
-                        <li>
-                            <div>
-                                <h3>E-mail</h3>
-                                <p>contato@unes.edu.br</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div>
-                                <h3>Telefone</h3>
-                                <p>(00) 0000-0000</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <div>
-                                <h3>Endereço</h3>
-                                <p>Campus UNES, Bloco Central</p>
-                            </div>
-                        </li>
-                    </ol>
+                        <button class="btn-enviar">Enviar</button>
+                    </form>
                 </div>
             </section>
         </main>
-
         <footer>
-            <p>© 2026 UNES Universidade — Todos os direitos reservados</p>
+
         </footer>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>
