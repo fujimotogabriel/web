@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block titulo %} Home {% endblock %}
+
+{% block conteudo %}
+
+<main>
+
+    <!-- Banner -->
+    <section class="banner">
+
+        <div class="container-fluid px-0 h-100">
+            <div class="gif-container">
+                <img src="{{ url_for('static', filename='img/Banner_rubi.gif') }}" class="banner-img" alt="Banner">
+                <div class="text position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center">
+                    <figure><img src="{{ url_for ('static', filename='img/logo.png') }}" class="banner-logo"></figure>
+                    <a class="btn btn-dark btn-oficial" href="https://www.cupdoggames.com/en">Acessar o site oficial</a> 
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="game-description text-white mx-auto d-flex align-items-center w-75 ">
+        <p class="desc-text font-monospace">
+            "Rubinite é um jogo de ação 2D no estilo pixel art, focado em batalhas contra chefes.
+            O jogo apresenta uma mecânica central única chamada "Foco", que permite ao jogador localizar os pontos fracos dos inimigos por meio de uma observação concentrada e executar ataques de estocada." - Cup Dog Games
+        </p>
+    </section>
+
+    <section class="container-fluid d-flex align-items-center justify-content-center">
+            <!-- Carousel -->
+            <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carrossel" data-bs-slide-to="3"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner h-100">
+
+                <div class="carousel-item active h-100">
+                    <iframe class="d-block w-100 h-100" src="https://www.youtube.com/embed/_XhDYcH3dgU">
+                    </iframe>
+                </div>
+
+                <figure class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/car1.png') }}" alt="Carrossel imagem 1" class="d-block w-100">
+                </figure>
+
+                <figure class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/car2.png') }}" alt="Carrossel imagem 2" class="d-block w-100">
+                </figure>
+
+                <figure class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/car3.png') }}" alt="Carrossel imagem 3" class="d-block w-100">
+                </figure>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            </div>
+    </section>
+    
+</main>
+
+{% endblock %}

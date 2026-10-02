@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block titulo %} Contato {% endblock %}
+
+{% block conteudo %}
+
+<main>
+    <section class="contact">
+        <div class="container contact-box">
+            <div class="contact-header">
+                <h1 class="text-center">Sugestões</h1>
+                <p>Envie ideias para melhorar este site não oficial!</p>
+            </div>
+            <form action="#" class="contact-form">
+                <div class="form-floating mb-3 mt-3">
+                    <input type="email" class="form-control" id="email" placeholder="email" autocomplete="email" name="email">
+                    <label for="email">Seu e-mail</label>
+                </div>
+
+                <div class="form-floating mb-3 mt-3">
+                    <textarea class="form-control" id="sugestao" name="sugestao" placeholder="sugestao"></textarea>
+                    <label for="sugestao">Sugestão</label>
+                </div>
+
+                <button class="btn-enviar">Enviar</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
