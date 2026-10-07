@@ -13,7 +13,3 @@ def chars():
 @app.route("/contato")
 def contato():
     return render_template("contato.html")
-
-@app.route("/forum")
-def forum():
-    return render_template("forum.html")

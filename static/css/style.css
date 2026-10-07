@@ -169,19 +169,6 @@ html, main, body {
     cursor: pointer;
 }
 
-/* Fórum */
-
-.pesquisa {
-  width: 75vw;
-  border: solid 1px red;
-  border-radius: 20px;
-}
-
-.pesquisa input[type=text] {
-  border: 0;
-}
-
-
 @media (max-width: 575.98px){ 
   section {
     min-height: 90vw
