@@ -1,6 +1,6 @@
 /* geral */
 section{
-  height: 40vw;
+  min-height: 40vw;
 }
 
 html, main, body {
@@ -76,7 +76,6 @@ html, main, body {
         6% 100%,
         0 50%
     );
-    cursor: pointer;
 }
 
 .save-content {
@@ -137,7 +136,7 @@ html, main, body {
     flex-direction: column;
     align-items: center;
 
-    margin-top: 15vw;
+    margin: 10vw 0;
     padding: 40px;
 
     background: #17191e;
@@ -170,11 +169,22 @@ html, main, body {
     cursor: pointer;
 }
 
+/* Fórum */
+
+.pesquisa {
+  width: 75vw;
+  border: solid 1px red;
+  border-radius: 20px;
+}
+
+.pesquisa input[type=text] {
+  border: 0;
+}
 
 
 @media (max-width: 575.98px){ 
   section {
-    height: 90vw
+    min-height: 90vw
   }
 
   .game-description{
