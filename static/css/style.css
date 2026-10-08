@@ -1,12 +1,26 @@
 /* geral */
 section{
   min-height: 40vw;
+  height: 40vw;
 }
 
 html, main, body {
   background-color: rgb(33, 33, 37) !important;
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
 
 /* Header */
 .logo {
