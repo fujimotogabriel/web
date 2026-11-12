@@ -11,7 +11,7 @@
                 <h1 class="text-center">Sugestões</h1>
                 <p>Envie ideias para melhorar este site não oficial!</p>
             </div>
-            <form action="#" class="contact-form">
+            <form action="{{ url_for('cadastro') }}" class="contact-form" method="post">
                 <div class="form-floating mb-3 mt-3">
                     <input type="email" class="form-control" id="email" placeholder="email" autocomplete="email" name="email">
                     <label for="email">Seu e-mail</label>

@@ -1,11 +1,17 @@
 {% extends "base.html" %}
 
-{% block titulo %} Home {% endblock %}
+{% block titulo %} Sugestões {% endblock %}
 
 {% block conteudo %}
 
 <main>
-    <h1>Sugestões</h1>
+    <ul>
+        {% for sugestao in sugestoes %}
+        <li>{{ sugestao.sug_email }} - {{ sugestao.sug_sugestao }}</li>
+        {% else %}
+        <li>Nenhuma sugestao encontrada.</li>
+        {% endfor %}
+    </ul>
 </main>
 
 {% endblock %}

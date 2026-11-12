@@ -1,9 +1,12 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, flash
 from contextlib import contextmanager
 import pymysql
 from dotenv import load_dotenv
+from datetime import datetime
+import os
 
 app = Flask(__name__)
+app.secret_key = os.getenv("SECRET_KEY")
 
 @app.route("/")
 def home():
@@ -14,20 +17,37 @@ def chars():
     return render_template("personagens.html")
 
 @app.route("/cadastro", methods=['GET', 'POST'])
-def contato():
+def cadastro():
     if request.method == 'POST':
         email = request.form.get('email').strip()
         sugestao = request.form.get('sugestao').strip()
+        dia = datetime.now()
+        dia = dia.strftime("%Y-%m-%d")
 
-        """if email and sugestao:
+        if email and sugestao:
             with get_conn() as conn:
-                with conn.cursor as cur:
-                    cursor.execute(
-                        "insert into sugestao (sug_email, sug_sugestao) values(%s, %s)", email, sugestao
-                    )"""
+                with conn.cursor() as cur:
+
+                    cur.execute("select * from sugestao where sug_sugestao like %s", f'%{sugestao}%')
+                    if not cur.fetchone():
+                        cur.execute(
+                        "insert into sugestao (sug_email, sug_sugestao, sug_data) values(%s, %s, %s)", (email, sugestao, dia)
+                        )
+                    else:
+                        flash("Sugestão já existe!")
+                    
         return redirect(url_for("cadastro"))
 
     return render_template("cadastro.html")
+
+@app.route("/listar")
+def listar():
+    with get_conn() as conn:
+        with conn.cursor() as cur:
+            cur.execute("select sug_email, sug_sugestao from sugestao")
+            sugestoes = cur.fetchall()
+            
+    return render_template("listar.html", sugestoes=sugestoes)
 
 @contextmanager
 def get_conn():
@@ -37,9 +57,11 @@ def get_conn():
     conn = pymysql.connect(
         host=os.getenv("DB_HOST"),
         user=os.getenv("DB_USER"),
-        password=os.get_env("DB_PASSWORD"),
+        password=os.getenv("DB_PASSWORD"),
         database=os.getenv("DB_NAME"),
-        port=os.getenv("DB_PORT")
+        port=int(os.getenv("DB_PORT")),
+        cursorclass=pymysql.cursors.DictCursor,
+        connect_timeout=5
     )
 
     try:
