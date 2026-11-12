@@ -13,7 +13,7 @@ def home():
     return render_template("index.html")
 
 @app.route("/personagens")
-def chars():
+def personagens():
     return render_template("personagens.html")
 
 @app.route("/cadastro", methods=['GET', 'POST'])
@@ -21,6 +21,7 @@ def cadastro():
     if request.method == 'POST':
         email = request.form.get('email').strip()
         sugestao = request.form.get('sugestao').strip()
+        titulo = request.form.get('titulo').strip()
         dia = datetime.now()
         dia = dia.strftime("%Y-%m-%d")
 
@@ -31,7 +32,7 @@ def cadastro():
                     cur.execute("select * from sugestao where sug_sugestao like %s", f'%{sugestao}%')
                     if not cur.fetchone():
                         cur.execute(
-                        "insert into sugestao (sug_email, sug_sugestao, sug_data) values(%s, %s, %s)", (email, sugestao, dia)
+                        "insert into sugestao (sug_email, sug_titulo, sug_sugestao, sug_data) values(%s, %s, %s, %s)", (email, titulo, sugestao, dia)
                         )
                     else:
                         flash("Sugestão já existe!")
@@ -44,7 +45,7 @@ def cadastro():
 def listar():
     with get_conn() as conn:
         with conn.cursor() as cur:
-            cur.execute("select sug_email, sug_sugestao from sugestao")
+            cur.execute("select sug_id, sug_titulo, sug_sugestao, date_format(sug_data, '%d/%m/%Y') as sug_data from sugestao")
             sugestoes = cur.fetchall()
             
     return render_template("listar.html", sugestoes=sugestoes)

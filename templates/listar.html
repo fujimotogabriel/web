@@ -5,13 +5,26 @@
 {% block conteudo %}
 
 <main>
-    <ul>
-        {% for sugestao in sugestoes %}
-        <li>{{ sugestao.sug_email }} - {{ sugestao.sug_sugestao }}</li>
-        {% else %}
-        <li>Nenhuma sugestao encontrada.</li>
-        {% endfor %}
-    </ul>
+
+    <section>
+        <div class="container container-box">
+            <h2 class="font-monospace"> Tem uma sugestão? envie em contato! </h2>
+            {% for sugestao in sugestoes %}
+                <div class="suggestion-box mb-3">
+                    <div class="suggestion-header">
+                        <h2>{{ sugestao.sug_titulo }} - #{{ sugestao.sug_id }}</h2>
+                        <p>{{ sugestao.sug_sugestao }}</p>
+                    </div>
+                    <div class="suggestion-extra">
+                        <p>{{ sugestao.sug_data }}</p>
+                    </div>
+                </div>
+            {% else %}
+                <h1>Nenhum sugestao encontrada.</h1>
+            {% endfor %}
+        </div>
+    </section>
+
 </main>
 
 {% endblock %}

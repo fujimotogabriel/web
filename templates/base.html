@@ -28,10 +28,13 @@
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="personagens">Personagens</a>
+                                <a class="nav-link" href="{{ url_for('personagens') }}">Personagens</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="cadastro">Contato</a>
+                                <a class="nav-link" href="{{ url_for('listar') }}">Sugestao</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('cadastro') }}">Contato</a>
                             </li>
                         </ul>
                         <div class="btn btn-success">

@@ -1,3 +1,7 @@
+:root {
+  --main-bg-color: rgb(33, 33, 37);
+}
+
 /* geral */
 section{
   min-height: 40vw;
@@ -145,9 +149,10 @@ main {
 
 
 /* contato */
-.contact-box {
+.container-box {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 
     margin: 10vw 0;
@@ -181,6 +186,23 @@ main {
 
     font-weight: bold;
     cursor: pointer;
+}
+
+/* listar */
+.suggestion-box {
+  background: var(--main-bg-color);
+  border: 1px solid #313741;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 80%;
+  padding: 20px;
+}
+
+.suggestion-header {
+  width: 80%;
 }
 
 @media (max-width: 575.98px){ 
