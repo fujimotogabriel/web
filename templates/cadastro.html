@@ -27,6 +27,18 @@
                     <label for="sugestao">Sugestão</label>
                 </div>
 
+                {% with messages = get_flashed_messages() %}
+                    {% for message in messages %}
+                        <div class="alert alert-danger alert-dismissible fade show">
+                            {{ message }}
+                            <button type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="alert">
+                            </button>
+                        </div>
+                    {% endfor %}
+                {% endwith %}
+
                 <button class="btn-enviar">Enviar</button>
             </form>
         </div>

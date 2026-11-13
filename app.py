@@ -43,11 +43,14 @@ def cadastro():
 
 @app.route("/listar")
 def listar():
-    with get_conn() as conn:
-        with conn.cursor() as cur:
-            cur.execute("select sug_id, sug_titulo, sug_sugestao, date_format(sug_data, '%d/%m/%Y') as sug_data from sugestao")
-            sugestoes = cur.fetchall()
-            
+    sugestoes = ""
+    try:
+        with get_conn() as conn:
+            with conn.cursor() as cur:
+                cur.execute("select sug_id, sug_titulo, sug_sugestao, date_format(sug_data, '%d/%m/%Y') as sug_data from sugestao")
+                sugestoes = cur.fetchall()
+    except:
+        pass
     return render_template("listar.html", sugestoes=sugestoes)
 
 @contextmanager
