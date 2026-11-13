@@ -5,7 +5,7 @@
 /* geral */
 section{
   min-height: 40vw;
-  height: 40vw;
+  height: auto;
 }
 
 html, main, body {
@@ -24,7 +24,10 @@ body {
 
 main {
   flex: 1;
+  min-height: auto;
+  overflow: visible;
 }
+
 
 /* Header */
 .logo {
@@ -77,6 +80,11 @@ main {
 #carrossel {
   width: 55%;
   height: 75%;
+}
+
+.video {
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
 }
 
 /* personagens */
@@ -155,7 +163,8 @@ main {
     justify-content: space-evenly;
     align-items: center;
 
-    margin: 10vw 0;
+    margin-top: 5vw;
+    margin-bottom: 3vw;
     padding: 40px;
 
     background: #17191e;
